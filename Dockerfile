@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-RUN apt-get update && apt-get install -y wget curl npm unzip
+RUN apt-get update && apt-get install -y wget curl npm unzip tmux
 RUN npm install -g n
 RUN n stable
 RUN npm install -g elasticdump
