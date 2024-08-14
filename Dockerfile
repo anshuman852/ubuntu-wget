@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 LABEL org.opencontainers.image.description DESCRIPTION="Docker image for elasticdump"
-RUN apt-get update && apt-get install -y wget curl npm unzip tmux
+RUN apt-get update && apt-get install -y wget curl npm unzip tmux nano
 RUN npm install -g n
 RUN n stable
 RUN npm install -g elasticdump
