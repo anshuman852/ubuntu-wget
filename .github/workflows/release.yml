@@ -42,12 +42,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Select config
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "CONFIG=.releaserc.json" >> $GITHUB_ENV
+          else
+            echo "CONFIG=.releaserc-prerelease.json" >> $GITHUB_ENV
+          fi
+
       - name: Calculate next version
         id: get-version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OUTPUT=$(npx semantic-release --dry-run)
+          OUTPUT=$(npx semantic-release --config $CONFIG --dry-run)
           if echo "$OUTPUT" | grep -q "The next release version is"; then
             VERSION=$(echo "$OUTPUT" | grep "The next release version is" | sed 's/.*The next release version is //' | tr -d '\n')
             echo "version=$VERSION" >> $GITHUB_OUTPUT
@@ -123,6 +131,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Select config
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "CONFIG=.releaserc.json" >> $GITHUB_ENV
+          else
+            echo "CONFIG=.releaserc-prerelease.json" >> $GITHUB_ENV
+          fi
+
       - name: Setup Git
         run: |
           git config user.name 'github-actions[bot]'
@@ -131,4 +147,4 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release --config $CONFIG
