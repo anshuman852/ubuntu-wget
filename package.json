@@ -1,0 +1,23 @@
+{
+  "name": "ubuntu-wget",
+  "version": "1.0.0",
+  "description": "Docker image for elasticdump with wget, curl, and other utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anshuman852/ubuntu-wget.git"
+  },
+  "keywords": [
+    "docker",
+    "ubuntu",
+    "wget",
+    "elasticdump"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/github": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^12.0.0",
+    "semantic-release": "^22.0.0"
+  }
+}
