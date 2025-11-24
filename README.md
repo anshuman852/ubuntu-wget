@@ -1,4 +1,4 @@
-# Ubuntu-wget Docker Image
+# Ubuntu-wget Docker Image.
 
 Docker image based on Ubuntu 22.04 with wget, curl, elasticdump, and other utilities.
 
