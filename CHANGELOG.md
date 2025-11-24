@@ -1,3 +1,10 @@
+## [0.1.10](https://github.com/anshuman852/ubuntu-wget/compare/v0.1.9...v0.1.10) (2025-11-24)
+
+
+### Bug Fixes
+
+* add develop and staging branches with prerelease settings in configuration ([0c690ab](https://github.com/anshuman852/ubuntu-wget/commit/0c690abe9c5df7d98fbf3c36041f6b6fb04618e8))
+
 ## [0.1.9](https://github.com/anshuman852/ubuntu-wget/compare/v0.1.8...v0.1.9) (2025-11-24)
 
 
