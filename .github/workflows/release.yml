@@ -78,7 +78,7 @@ jobs:
             type=raw,value=latest
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@ac9327eae2b366085ac9327eae2b366085ac7f6a2d02df8aa8ead720a
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64
