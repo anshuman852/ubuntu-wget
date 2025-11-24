@@ -1,5 +1,7 @@
 FROM ubuntu:22.04
-LABEL org.opencontainers.image.description DESCRIPTION="Docker image for elasticdump"
+ARG VERSION
+LABEL org.opencontainers.image.description="Docker image for elasticdump" \
+      org.opencontainers.image.version=$VERSION
 
 
 
