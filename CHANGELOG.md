@@ -1,3 +1,10 @@
+## [0.1.11-tc.1](https://github.com/anshuman852/ubuntu-wget/compare/v0.1.10...v0.1.11-tc.1) (2025-11-24)
+
+
+### Bug Fixes
+
+* update ([0e5d275](https://github.com/anshuman852/ubuntu-wget/commit/0e5d275e1d7e076efca0dfe7465120e272bcb08d))
+
 ## [0.1.10](https://github.com/anshuman852/ubuntu-wget/compare/v0.1.9...v0.1.10) (2025-11-24)
 
 
